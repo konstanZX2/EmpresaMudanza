@@ -1,49 +1,75 @@
-import java.util.Scanner;
+
 
 public class Paquete {
-    Scanner escaneado=new Scanner(System.in);
 
-    private int Id(){
-        System.out.println("Introduzca el ID del paquete");
-        int idPaquete;
-        idPaquete= escaneado.nextInt();
-        return idPaquete;
+    public int id;
+    public double volumen;
+    public double peso;
+    public boolean fragilidad;
+
+    public Paquete(int id, double volumen, double peso, boolean fragilidad) {
+        this.id = id;
+        this.volumen = volumen;
+        this.peso = peso;
+        this.fragilidad = fragilidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Paquete{" +
+                "id=" + id +
+                ", volumen=" + volumen +
+                ", peso=" + peso +
+                ", fragilidad=" + fragilidad +
+                '}';
+
     }
 
 
-
-
-    private double Volumen(){
-        System.out.println("Introduzca el volumen del paquete");
-        double volumenPaquete;
-        volumenPaquete= escaneado.nextDouble();
-        return volumenPaquete;
+    public int getId() {
+        return id;
     }
 
 
-
-    private double Peso(){
-        System.out.println("Introduzca el peso del paquete");
-        double pesoPaquete;
-        pesoPaquete= escaneado.nextDouble();
-        return pesoPaquete;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    private boolean Fragil(){
-        System.out.println("Introduzca si es Fragil. 1 si es fragil, 0 si no es fragil.");
-        boolean paqueteFragil=false;
-        int fragil;
-        fragil= escaneado.nextInt();
-        if (fragil==1){paqueteFragil=true;}
-        if (fragil==0){paqueteFragil=false;}
-        return paqueteFragil;
+    public double getVolumen() {
+        return volumen;
     }
 
+    public void setVolumen(double volumen) {
+        this.volumen = volumen;
+    }
 
+    public double getPeso() {
+        return peso;
+    }
 
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
 
+    public boolean isFragilidad() {
+        return fragilidad;
+    }
 
-
+    public void setFragilidad(boolean fragilidad) {
+        this.fragilidad = fragilidad;
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
