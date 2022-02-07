@@ -8,5 +8,20 @@ public class Main {
         Camion camion1 = new Camion("2323ACC", 60, 90);
 
 
+
+
+
+        if (camion1.cabePaquete(paquete1))
+            camion1.cargaPaquete(paquete1);
+
+        camion1.cargaPaquete(paquete2);
+        camion1.cargaPaquete(paquete3);
+
+
+        Mudanza mudanza = new Mudanza(1,2);
+        mudanza.setCamion(camion1);
+        mudanza.incluyePaquete(paquete1);
+        mudanza.incluyePaquete(paquete2);
+        mudanza.incluyePaquete(paquete3);
     }
 }
